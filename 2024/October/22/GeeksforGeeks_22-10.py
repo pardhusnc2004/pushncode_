@@ -1,50 +1,23 @@
 '''
-    GeeksforGeeks Daily Question (20-10-2024)
-    Sort a k sorted doubly linked list
+    GeeksforGeeks Daily Question (22-10-2024)
+    Sub-arrays with equal number of occurences
     Python3 solution
 '''
 
-class DLLNode:
-    def __init__(self,val) -> None:
-        self.data = val
-        self.prev = None
-        self.next = None
-
-from heapq import heappush, heappop
-
-class Compare:
-    def __init__(self, node):
-        self.node = node
-    def __lt__(self, other):
-        return self.node.data < other.node.data
-
-
+from collections import defaultdict
 class Solution:
-    def sortAKSortedDLL(self, head, k):
-        if head is None:
-            return head
-        pq = []
-
-        newHead = None
-        last = None
-        for i in range(k + 1):
-            if head is not None:
-                heappush(pq, Compare(head))
-                head = head.next
-
-        while pq:
-            min_node = heappop(pq).node
-            if newHead is None:
-                newHead = min_node
-                newHead.prev = None
-                last = newHead
-            else:
-                last.next = min_node
-                min_node.prev = last
-                last = min_node
-            if head is not None:
-                heappush(pq, Compare(head))
-                head = head.next
-        last.next = None
-
-        return newHead
+    def sameOccurrence(self, arr, x, y):
+        # code here
+        d = defaultdict(int)
+        d[0] = 1
+        res = 0
+        xCnt, yCnt = 0, 0
+        for i in arr:
+            if i == x:
+                xCnt += 1
+            if i == y:
+                yCnt += 1
+            diff = xCnt - yCnt
+            res += d[diff]
+            d[diff] += 1
+        return res
