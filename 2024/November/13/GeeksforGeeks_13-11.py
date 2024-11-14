@@ -1,5 +1,5 @@
 '''
-    GeeksforGeeks Daily Question (12-11-2024)
+    GeeksforGeeks Daily Question (13-11-2024)
     Intersection Point in Y Shaped Linked Lists
     Python3 solution
 '''

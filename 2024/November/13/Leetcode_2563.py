@@ -1,5 +1,5 @@
 '''
-    Leetcode Daily Question (12-11-2024)
+    Leetcode Daily Question (13-11-2024)
     2563. Count the Number of Fair Pairs
     Python3 solution
 '''
