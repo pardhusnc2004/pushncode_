@@ -1,5 +1,3 @@
-import time
-
 def print_welcome():
     print(r"""
     =========================================
