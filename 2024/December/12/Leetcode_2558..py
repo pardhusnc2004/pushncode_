@@ -1,5 +1,5 @@
 '''
-    Leetcode Daily Question (11-12-2024)
+    Leetcode Daily Question (12-12-2024)
     2779. Maximum Beauty of an Array After Applying Operation
     Python3 solution
 '''
