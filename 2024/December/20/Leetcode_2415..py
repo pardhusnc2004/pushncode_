@@ -1,5 +1,5 @@
 '''
-    Leetcode Daily Question (19-12-2024)
+    Leetcode Daily Question (20-12-2024)
     2415. Reverse Odd Levels of Binary Tree
     Python3 solution
 '''
