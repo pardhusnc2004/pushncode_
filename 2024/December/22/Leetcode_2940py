@@ -1,0 +1,33 @@
+'''
+    Leetcode Daily Question (22-12-2024)
+    2940. Find Building Where Alice and Bob Can Meet
+    Python3 solution
+'''
+from typing import *
+from collections import *
+from bisect import *
+from math import *
+from heapq import *
+
+class Solution:
+    def leftmostBuildingQueries(self, heights: List[int], queries: List[List[int]]) -> List[int]:
+        d = defaultdict(list)
+        qLen = len(queries)
+        res = [-1] * qLen
+        for idx, q in enumerate(queries):
+            left, right = sorted(q)
+            if left == right or heights[right] > heights[left]:
+                res[idx] = right
+            else:
+                h = max(heights[left], heights[right])
+                d[right].append((h, idx))
+        hp = []
+        for idx, h in enumerate(heights):
+            for qHeight, qIndex in d[idx]:
+                heappush(hp, (qHeight, qIndex))
+
+            while hp and h > hp[0][0]:
+                qHeight, qIndex = heappop(hp)
+                res[qIndex] = idx
+        return res
+ 
