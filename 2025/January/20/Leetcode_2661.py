@@ -1,5 +1,5 @@
 '''
-    Leetcode Daily Question (19-01-2025)
+    Leetcode Daily Question (20-01-2025)
     2661. First Completely Painted Row or Column
     Python3 solution
 '''
