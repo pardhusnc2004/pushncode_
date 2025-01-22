@@ -1,5 +1,5 @@
 '''
-    GeeksforGeeks Daily Question (2-01-2025)
+    GeeksforGeeks Daily Question (21-01-2025)
     Linked List Group Reverse
     Python3 solution
 '''
