@@ -1,6 +1,6 @@
 '''
     Leetcode Daily Question (08-03-2025)
-    2349. Design a Number Container System
+    2379. Minimum Recolors to Get K Consecutive Black Blocks
     Python3 solution
 '''
 from typing import List
